@@ -6,7 +6,7 @@ This plugin lets you preview images attached to issue notes
 Screenshot
 -----------
 
-![demo](/images/demo.png)
+![demo](https://raw.github.com/anjlab/redmine_inline_note_images_plugin/master/demo.png)
 
 Installation and Setup
 ----------------------
