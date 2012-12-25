@@ -1,7 +1,7 @@
 require_dependency 'inline_image_hook/hooks'
 
 Redmine::Plugin.register :redmine_inline_note_images_plugin do
-  name 'Inline Note Images plugin'
+  name 'Redmine Inline Note Images plugin'
   author 'AnjLab'
   description 'Inline note images for Redmine issues'
   version '0.0.1'
