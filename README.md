@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Redmine Inline Note Images plugin
 =======================
 
