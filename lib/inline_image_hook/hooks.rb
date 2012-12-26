@@ -5,6 +5,6 @@ class Hooks < Redmine::Hook::ViewListener
   #end
 
   render_on :view_issues_history_journal_bottom,
-            partial: 'hooks/inline_image_hook/inline_images_paste'#,
+            :partial => 'hooks/inline_image_hook/inline_images_paste'#,
             #locals: context
 end
