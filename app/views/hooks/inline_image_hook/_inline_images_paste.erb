@@ -1,8 +1,8 @@
 <div class="attachments" style="margin-bottom: 16px;">
   <% journal.details.where(property: 'attachment').each do |a| %>
 
-      <% attachment = Attachment.find(a.prop_key) %>
-      <% if attachment.image? %>
+      <% attachment = Attachment.find_by_id a.prop_key %>
+      <% if attachment.present? && attachment.image? %>
           <%= link_to image_tag(url_for({:controller => 'attachments', :action => 'thumbnail', :id => attachment, :size => 100 }), :height => '100'),
                       {:controller => 'attachments', :action => 'show', :id => attachment, :filename => attachment.filename },
                       :class => 'lightbox', :rel => 'attachments',
