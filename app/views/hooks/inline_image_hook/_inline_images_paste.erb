@@ -1,5 +1,5 @@
 <div class="attachments" style="margin-bottom: 16px;">
-  <% journal.details.where(property: 'attachment').each do |a| %>
+  <% journal.details.where(:property => 'attachment').each do |a| %>
 
       <% attachment = Attachment.find_by_id a.prop_key %>
       <% if attachment.present? && attachment.image? %>
