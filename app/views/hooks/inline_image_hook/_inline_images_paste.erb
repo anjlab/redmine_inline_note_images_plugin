@@ -1,12 +1,14 @@
-<div class="attachments" style="margin-bottom: 16px;">
-  <% journal.details.where(property: 'attachment').each do |a| %>
+<% if defined?(thumbnails) && thumbnails %>
+	<div class="attachments" style="margin-bottom: 16px;">
+	  <% journal.details.where(property: 'attachment').each do |a| %>
 
-      <% attachment = Attachment.find_by_id a.prop_key %>
-      <% if attachment.present? && attachment.image? %>
-          <%= link_to image_tag(url_for({:controller => 'attachments', :action => 'thumbnail', :id => attachment })),
-                      {:controller => 'attachments', :action => 'show', :id => attachment, :filename => attachment.filename },
-                      :class => 'lightbox', :rel => 'attachments',
-                      :title => "#{attachment.filename}#{ ('-' + attachment.description) unless attachment.description.blank? }" %>
-      <% end %>
-  <% end %>
-</div>
+	      <% attachment = Attachment.find_by_id a.prop_key %>
+	      <% if attachment.present? && attachment.image? %>
+	          <%= link_to image_tag(url_for({:controller => 'attachments', :action => 'thumbnail', :id => attachment })),
+	                      {:controller => 'attachments', :action => 'show', :id => attachment, :filename => attachment.filename },
+	                      :class => 'lightbox', :rel => 'attachments',
+	                      :title => "#{attachment.filename}#{ ('-' + attachment.description) unless attachment.description.blank? }" %>
+	      <% end %>
+	  <% end %>
+	</div>
+<% end %>
