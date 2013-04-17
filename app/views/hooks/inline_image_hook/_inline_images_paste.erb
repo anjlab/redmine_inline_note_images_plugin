@@ -5,7 +5,7 @@
 
 <% images = attachments.select(&:image?) %>
 <% if images.any? %>
-	<div class="attachments">
+	<div class="journal attachments">
 	<% images.each do |image| %>
 		<%= link_to image_tag(url_for({:controller => 'attachments', :action => 'thumbnail', :id => image })),
                           {:controller => 'attachments', :action => 'show', :id => image, :filename => image.filename },
