@@ -1,5 +1,5 @@
 <% attachments = Array.new %>
-<% journal.details.where(property: 'attachment').each do |a| %>
+<% journal.details.where(:property => 'attachment').each do |a| %>
 	<% attachments.push Attachment.find_by_id a.prop_key %>
 <% end %>
 
