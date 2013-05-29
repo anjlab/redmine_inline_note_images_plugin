@@ -1,0 +1,17 @@
+#history .attachments {
+	border:        1px solid #CCCCCC;
+	border-left:   none;
+	display:       inline-block;
+	padding:       10px 10px 0 0;
+	margin-top:    0;
+	margin-bottom: 12px;
+}
+
+#history .attachments a {
+	display:        inline-block;
+	vertical-align: middle;
+	border:         2px solid #DDDDDD;
+	padding:        2px;
+	margin-right:   5px;
+	margin-bottom:  10px;
+}
