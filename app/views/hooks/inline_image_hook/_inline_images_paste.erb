@@ -3,7 +3,7 @@
 	<% attachments.push Attachment.find_by_id a.prop_key %>
 <% end %>
 
-<% images = attachments.select(&:image?) %>
+<% images = attachments.compact.select(&:image?) %>
 <% if images.any? %>
 	<div class="journal attachments">
 	<% images.each do |image| %>
